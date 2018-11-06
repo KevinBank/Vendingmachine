@@ -6,8 +6,9 @@ public class Main {
         boolean runMachine = true;
 
         Scanner scan = new Scanner(System.in);
-        String input = "";
+        String input;
 
+        //strings voor de vragen
         String[] commandos0 = {"ja","nee","sans"}; //Wil je iets eten/drinken?
         String[] commandos1 = {"gezond","ongezond"}; //gezond of ongezond?
 
@@ -18,32 +19,43 @@ public class Main {
             boolean commando0 = false; //commando 01 is niet nodig omdat het de eerste optie is
             //als het nee is eindigt het programma dus ja is de enigste optie
 
-            //ja/gezond of ongezond
+            //ja/gezond of ongezond?
             boolean commando1 = false;
 
-            //ja/gezond/warm of koud
-            boolean commando100 = false;
-            boolean commando101 = false;
 
-            //ja/ongezond/warm of koud
-            boolean commando110 = false;
-            boolean commando111 = false;
+            //Gezond of ongezond?
 
-            //ja/gezond/warm/groente of vlees
-            boolean commando1000 = false;
-            boolean commando1001 = false;
+            boolean commandoGezond = false;
+            boolean commandoOngezond = false;
 
-            //ja/gezond/koud/fruit of salade
-            boolean commando1010 = false;
-            boolean commando1011 = false;
 
-            //ja/ongezond/warm/gebak of frituur
-            boolean commando1100 = false;
-            boolean commando1101 = false;
+            //warm of koud
 
-            //ja/ongezond/koud/koek of snoep
-            boolean commando1110 = false;
-            boolean commando1111 = false;
+            boolean commandoGezondWarm = false;
+            boolean commandoGezondKoud = false;
+
+            boolean commandoOngezondWarm = false;
+            boolean commandoOngezondKoud = false;
+
+
+            //GEZOND
+            //groente of vlees
+            boolean commandoGezondWarmGroente = false;
+            boolean commandoGezondWarmVlees = false;
+
+            //fruit of salade
+            boolean commandoGezondKoudFruit = false;
+            boolean commandoGezondKoudSalade = false;
+
+            //gebak of frituur
+            boolean commandoOngezondWarmGebak = false;
+            boolean commandoOngezondWarmFrituur = false;
+
+            //Koek Snoep of Ijs?
+            boolean commandoOngezondKoudKoek = false;
+            boolean commandoOngezondKoudSnoep = false;
+            boolean commandoOngezondKoudIjs = false;
+
 
             while (commando0 == false)
             {
@@ -87,6 +99,17 @@ public class Main {
                     }
                 }
 
+            }
+            while (commando1)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(commandos1[0]))
+                        System.out.println("Warm of koud?");
+                    commando1 = false;
+                    commandoGezond = true;
+                }
             }
         }
         }
