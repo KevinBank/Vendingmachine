@@ -69,7 +69,7 @@ import java.util.*;
                         System.out.println("Gezond of Ongezond?");
                         commando0 = true;
                         commando1 = true;
-                        break;
+
                     }
                     else if (input.equals(commandos0[1]))
                     {
@@ -96,7 +96,7 @@ import java.util.*;
                                 "░░░░░░████░░░░░░░░░░░░░░████\n" +
                                 "░░░░░░░░░░██████████████");
                         commando0 = true;
-                        break;
+
                     }
                 }
 
@@ -111,14 +111,14 @@ import java.util.*;
                         System.out.println("Warm of koud?");
                         commando1 = false;
                         commandoGezond = true;
-                        break;
+
                     }
                     else if(input.equals(commandos1[1]))
                     {
                         System.out.println("Warm of koud ?");
                         commando1 = false;
                         commandoOngezond = true;
-                        break;
+
                     }
                 }
             }
@@ -132,14 +132,14 @@ import java.util.*;
                         System.out.println("Vlees of Groente?");
                         commandoGezond = false;
                         commandoGezondWarm = true;
-                        break;
+
                     }
                     else if (input.equals(commandosWarmKoud[1]))
                     {
                         System.out.println("Fruit of Salade?");
                         commandoGezond = false;
                         commandoGezondKoud = true;
-                        break;
+
                     }
                 }
             }
@@ -152,17 +152,22 @@ import java.util.*;
                     {
                         System.out.println("Gebak of Frituur?");
                         commandoOngezond = false;
-                        commandoOngezondKoud = true;
-                        break;
+                        commandoOngezondWarm = true;
+
                     }
                     else if (input.equals(commandosWarmKoud[1]))
                     {
                         System.out.println("Koek, Snoep of ijs?");
                         commandoOngezond = false;
                         commandoOngezondKoud = true;
-                        break;
+
                     }
                 }
+            }
+            while (commandoGezondWarm)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
             }
         }
         }
