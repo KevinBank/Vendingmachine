@@ -1,51 +1,52 @@
 import java.util.*;
 
-public class Main {
+            public class Main {
 
-    public static void main(String[] args) {
-        boolean runMachine = true;
+                public static void main(String[] args) {
+                    boolean runMachine = true;
 
-        Scanner scan = new Scanner(System.in);
-        String input;
+                    Scanner scan = new Scanner(System.in);
+                    String input;
 
-        //strings voor de vragen
-        String[] commandos0 = {"ja","nee","sans"}; //Wil je iets eten/drinken?
-        String[] commandos1 = {"gezond","ongezond"}; //gezond of ongezond?
+                    //strings voor de vragen
+                    String[] commandos0 = {"ja","nee","sans"}; //Wil je iets eten/drinken?
+                    String[] commandos1 = {"gezond","ongezond"}; //gezond of ongezond?
+                    String[] commandosWarmKoud = {"warm","koud"}; //Warm of koud?
 
-        while (runMachine) //als de machine aanstaat
-        {
-            System.out.println("Wil je iets eten?");
-            //opgeslagen commando dingen nummers staan voor opties
-            boolean commando0 = false; //commando 01 is niet nodig omdat het de eerste optie is
-            //als het nee is eindigt het programma dus ja is de enigste optie
+                    while (runMachine) //als de machine aanstaat
+                    {
+                        System.out.println("Wil je iets eten?");
+                        //opgeslagen commando dingen nummers staan voor opties
+                        boolean commando0 = false; //commando 01 is niet nodig omdat het de eerste optie is
+                        //als het nee is eindigt het programma dus ja is de enigste optie
 
-            //ja/gezond of ongezond?
-            boolean commando1 = false;
-
-
-            //Gezond of ongezond?
-
-            boolean commandoGezond = false;
-            boolean commandoOngezond = false;
+                        //ja/gezond of ongezond?
+                        boolean commando1 = false;
 
 
-            //warm of koud
+                        //Gezond of ongezond?
 
-            boolean commandoGezondWarm = false;
-            boolean commandoGezondKoud = false;
-
-            boolean commandoOngezondWarm = false;
-            boolean commandoOngezondKoud = false;
+                        boolean commandoGezond = false;
+                        boolean commandoOngezond = false;
 
 
-            //GEZOND
-            //groente of vlees
-            boolean commandoGezondWarmGroente = false;
-            boolean commandoGezondWarmVlees = false;
+                        //warm of koud
 
-            //fruit of salade
-            boolean commandoGezondKoudFruit = false;
-            boolean commandoGezondKoudSalade = false;
+                        boolean commandoGezondWarm = false;
+                        boolean commandoGezondKoud = false;
+
+                        boolean commandoOngezondWarm = false;
+                        boolean commandoOngezondKoud = false;
+
+
+                        //GEZOND
+                        //groente of vlees
+                        boolean commandoGezondWarmGroente = false;
+                        boolean commandoGezondWarmVlees = false;
+
+                        //fruit of salade
+                        boolean commandoGezondKoudFruit = false;
+                        boolean commandoGezondKoudSalade = false;
 
             //gebak of frituur
             boolean commandoOngezondWarmGebak = false;
@@ -114,14 +115,55 @@ public class Main {
                     }
                     else if(input.equals(commandos1[1]))
                     {
-                        System.out.println("Warm of koud 2?");
+                        System.out.println("Warm of koud ?");
                         commando1 = false;
                         commandoOngezond = true;
                         break;
                     }
                 }
             }
-            //..........
+            while (commandoGezond)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(commandosWarmKoud[0]))
+                    {
+                        System.out.println("Vlees of Groente?");
+                        commandoGezond = false;
+                        commandoGezondWarm = true;
+                        break;
+                    }
+                    else if (input.equals(commandosWarmKoud[1]))
+                    {
+                        System.out.println("Fruit of Salade?");
+                        commandoGezond = false;
+                        commandoGezondKoud = true;
+                        break;
+                    }
+                }
+            }
+            while (commandoOngezond)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(commandosWarmKoud[0]))
+                    {
+                        System.out.println("Gebak of Frituur?");
+                        commandoOngezond = false;
+                        commandoOngezondKoud = true;
+                        break;
+                    }
+                    else if (input.equals(commandosWarmKoud[1]))
+                    {
+                        System.out.println("Koek, Snoep of ijs?");
+                        commandoOngezond = false;
+                        commandoOngezondKoud = true;
+                        break;
+                    }
+                }
+            }
         }
         }
 }
