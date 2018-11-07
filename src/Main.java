@@ -106,11 +106,22 @@ public class Main {
                 input = input.toLowerCase();
                 {
                     if (input.equals(commandos1[0]))
+                    {
                         System.out.println("Warm of koud?");
-                    commando1 = false;
-                    commandoGezond = true;
+                        commando1 = false;
+                        commandoGezond = true;
+                        break;
+                    }
+                    else if(input.equals(commandos1[1]))
+                    {
+                        System.out.println("Warm of koud 2?");
+                        commando1 = false;
+                        commandoOngezond = true;
+                        break;
+                    }
                 }
             }
+            //..........
         }
         }
 }
