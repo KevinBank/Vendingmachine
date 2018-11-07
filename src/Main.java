@@ -13,6 +13,11 @@ import java.util.*;
                     String[] commandos1 = {"gezond","ongezond"}; //gezond of ongezond?
                     String[] commandosWarmKoud = {"warm","koud"}; //Warm of koud?
 
+                    String[] commandosGezondWarm = {"vlees","groente"};
+                    String[] commandosGezondKoud = {"fruit","salade"};
+                    String[] commandosOngezondWarm = {"gebak","frituur"};
+                    String[] commandosOngezondKoud = {"koek","snoep","ijs"};
+
                     while (runMachine) //als de machine aanstaat
                     {
                         System.out.println("Wil je iets eten?");
@@ -168,6 +173,109 @@ import java.util.*;
             {
                 input = scan.nextLine();
                 input = input.toLowerCase();
+                {
+                    if (input.equals(commandosGezondWarm[0]))
+                    {
+                        System.out.println("$5.00 Biefstuk\n" +
+                                "$5.50 Varkensvlees\n" +
+                                "$4.00 Kip");
+                        commandoGezondWarm = false;
+                        commandoGezondWarmVlees = true;
+                    }
+                    else if (input.equals(commandosGezondWarm[1]))
+                    {
+                        System.out.println("$3.00 Wortels\n" +
+                                "$2.00 Dopwerten\n" +
+                                "$2.50 Slabonen\n" +
+                                "$2.50 Snijbonen");
+                        commandoGezondWarm = false;
+                        commandoGezondWarmGroente = true;
+                    }
+                }
+            }
+            while (commandoGezondKoud)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(commandosGezondKoud[0]))
+                    {
+                        System.out.println("$1.50 Appel\n" +
+                                "$2.00 Peer\n" +
+                                "$9.00 Tros druiven\n" +
+                                "$2.50 sinasappel");
+                        commandoGezondKoud = false;
+                        commandoGezondKoudFruit = true;
+                    }
+                    else if (input.equals(commandosGezondKoud[1]))
+                    {
+                        System.out.println("$6.00 Zoete aardappel salade met avocado\n" +
+                                "$5.00 Mediterrane salade\n" +
+                                "$8.50 Zalm salade met peultjes en avocado\n" +
+                                "$4.50 Watermeloen salade met feta\n" +
+                                "$7.50 Boekweitsalade");
+                        commandoGezondKoud = false;
+                        commandoGezondKoudSalade = true;
+                    }
+                }
+            }
+            while (commandoOngezondWarm)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(commandosOngezondWarm[0]))
+                    {
+                        System.out.println("$12.00 Appeltaart\n" +
+                                "$8.00 Slagroomtaart\n" +
+                                "$4.50 Kwarktaart\n" +
+                                "$20.00 Glazuurtaart");
+                        commandoOngezondWarm = false;
+                        commandoOngezondWarmGebak = true;
+                    }
+                    else if (input.equals(commandosOngezondWarm[1]))
+                    {
+                        System.out.println("$1.00 F R I K A N D E L B R O O D J E\n" +
+                                "$3.00 Patat\n" +
+                                "$1.50 Kroket");
+                        commandoOngezondWarm = false;
+                        commandoOngezondWarmFrituur = true;
+                    }
+                }
+            }
+            while (commandoOngezondKoud)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(commandosOngezondKoud[0]))
+                    {
+                        System.out.println("$2.50 Chocoladereep\n" +
+                                "$5.00 Speculaaskoek\n" +
+                                "$2.50 Gevulde koek\n" +
+                                "$2.00 Stroopwafel");
+                        commandoOngezondKoud = false;
+                        commandoOngezondKoudKoek = true;
+                    }
+                    else if (input.equals(commandosOngezondKoud[1]))
+                    {
+                        System.out.println("$0.50 Lolly\n" +
+                                "$15.00 Zak met willekeurig snoep\n" +
+                                "$0.50 Dropveter");
+                        commandoOngezondKoud = false;
+                        commandoOngezondKoudSnoep = true;
+                    }
+                    else if (input.equals(commandosOngezondKoud[2]))
+                    {
+                        System.out.println("$1.00 Waterijsje\n" +
+                                "$3.00 Softijsje\n" +
+                                "$5.00 Softijsje met 2 bolletjes\n" +
+                                "$10.00 Softijsje met 5 bolletjes\n" +
+                                "$50.00 Softijsbak met 40 bolletjes");
+                        commandoOngezondKoud = false;
+                        commandoOngezondKoudIjs = true;
+                    }
+                }
             }
         }
         }
