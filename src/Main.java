@@ -27,14 +27,17 @@ import java.util.*;
 
                     String[] commandosOngezondWarmGebak = {"appeltaart","slagroomtaart","kwarktaart","glazuurtaart"};
                     String[] commandosOngezondWarmFrituur = {"frikandelbroodje","patat","kroket"};
-                    String[] commandosOngezondKoudKoek = {"chocoladereep","speculaaskoek","gevulde koek","stroopwafel"};
+                    String[] commandosOngezondKoudKoek = {"chocoladekoek","speculaaskoek","gevulde koek","stroopwafel"};
                     String[] commandosOngezondKoudSnoep = {"lolly","zaksnoep","dropveter"};
                     String[] commandosOngezondKoudIjs = {"softijs1","softijs2","softijs5","softijs40"};
 
 
                     while (runMachine) //als de machine aanstaat
                     {
-                        System.out.println("Wil je iets eten?");
+                        System.out.println("\n" +
+                                "WELKOM bij deze futuristische vending machine\n" +
+                                "We noemen het Futuristisch omdat deze vending machine warm en koude dingen kan bewaren!\n" +
+                                "Maar, hoe dan ook. Wil je iets eten?");
                         //opgeslagen commando dingen nummers staan voor opties
                         boolean commando0 = false; //commando 01 is niet nodig omdat het de eerste optie is
                         //als het nee is eindigt het programma dus ja is de enigste optie
@@ -216,7 +219,7 @@ import java.util.*;
                     {
                         System.out.println("$1.50 Appel\n" +
                                 "$2.00 Peer\n" +
-                                "$9.00 Tros druiven\n" +
+                                "$9.00 (Tros) druiven\n" +
                                 "$2.50 sinasappel");
                         commandoGezondKoud = false;
                         commandoGezondKoudFruit = true;
@@ -265,7 +268,7 @@ import java.util.*;
                 {
                     if (input.equals(commandosOngezondKoud[0]))
                     {
-                        System.out.println("$2.50 Chocoladereep\n" +
+                        System.out.println("$2.50 Chocoladekoek\n" +
                                 "$5.00 Speculaaskoek\n" +
                                 "$2.50 Gevulde koek\n" +
                                 "$2.00 Stroopwafel");
@@ -275,7 +278,7 @@ import java.util.*;
                     else if (input.equals(commandosOngezondKoud[1]))
                     {
                         System.out.println("$0.50 Lolly\n" +
-                                "$15.00 (Zaksnoep) Zak vol met willekeurig snoep\n" +
+                                "$15.00 ('Zaksnoep') Zak vol met willekeurig snoep\n" +
                                 "$0.50 Dropveter");
                         commandoOngezondKoud = false;
                         commandoOngezondKoudSnoep = true;
@@ -297,7 +300,7 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(1commandos[0]))
+                    if (input.equals(commandosGezondWarmVlees[0])) //0 biefstuk 5 | 1 varkensvlees 5.5 | 2 kip 4
                     {
                         System.out.println("");
                     }
@@ -308,9 +311,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(2commandos[0]))
+                    if (input.equals(commandosGezondWarmGroente[0])) //0 wortels 3 | 1 dopwerten 2 | 2 slabonen 2.5 | 3 snijbonen 2.5
                     {
-                        System.out.println("");
+                        System.out.println("1");
                     }
                 }
             }
@@ -319,9 +322,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(3commandos[0]))
+                    if (input.equals(commandosGezondKoudFruit[0])) //0 appel 1.5 | 1 peer 2 | 2 druiven 9 | 3 sinasappel 2.5
                     {
-                        System.out.println("");
+                        System.out.println("2");
                     }
                 }
             }
@@ -330,9 +333,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(4commandos[0]))
+                    if (input.equals(commandosGezondKoudSalade[0])) //0 (1) 6 | 1 (2) 5 | 2 (3) 8.5 | 3 (4) 4.5 | 4 (5) 7.5
                     {
-                        System.out.println("");
+                        System.out.println("3");
                     }
                 }
             }
@@ -341,9 +344,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(5commandos[0]))
+                    if (input.equals(commandosOngezondWarmGebak[0])) //0 appeltaart 12 | 1 slagroomtaart 8 | 2 kwarktaart 4.5 | 3 glazuurtaart 20
                     {
-                        System.out.println("");
+                        System.out.println("4");
                     }
                 }
             }
@@ -352,9 +355,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(6commandos[0]))
+                    if (input.equals(commandosOngezondWarmFrituur[0])) //0 frikandelbroodje 1 | 1 patat 3 | 2 kroket 1.5 |
                     {
-                        System.out.println("");
+                        System.out.println("5");
                     }
                 }
             }
@@ -363,9 +366,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(7commandos[0]))
+                    if (input.equals(commandosOngezondKoudKoek[0])) //0 chocoladekoek 2.5 | 1 speculaaskoek 5 | 2 gevulde koek 2.5 | 3 stroopwafel 2
                     {
-                        System.out.println("");
+                        System.out.println("6");
                     }
                 }
             }
@@ -374,9 +377,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(8commandos[0]))
+                    if (input.equals(commandosOngezondKoudSnoep[0])) //0 lolly 0.5 | 1 zaksnoep 15 | 2 dropveter 0.5
                     {
-                        System.out.println("");
+                        System.out.println("7");
                     }
                 }
             }
@@ -385,9 +388,9 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(9commandos[0]))
+                    if (input.equals(commandosOngezondKoudIjs[0])) //0 waterijsje 1 | 1 softijs1 3 | 2 softijs2 5 | 3 softijs5 10 | 4 softijs40 50
                     {
-                        System.out.println("");
+                        System.out.println("8");
                     }
                 }
             }
