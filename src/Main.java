@@ -29,14 +29,14 @@ import java.util.*;
                     String[] commandosOngezondWarmFrituur = {"frikandelbroodje","patat","kroket"};
                     String[] commandosOngezondKoudKoek = {"chocoladekoek","speculaaskoek","gevulde koek","stroopwafel"};
                     String[] commandosOngezondKoudSnoep = {"lolly","zaksnoep","dropveter"};
-                    String[] commandosOngezondKoudIjs = {"softijs1","softijs2","softijs5","softijs40"};
+                    String[] commandosOngezondKoudIjs = {"waterijsje","softijs1","softijs2","softijs5","softijs40"};
 
                     double money;
-                    money = 1;
+                    money = 80;
 
                     while (runMachine) //als de machine aanstaat
                     {
-                        if (money < 0)
+                        if (money <= 0)
                         {
                             System.out.println("Game over je bent blut!");
                             runMachine = false;
@@ -284,9 +284,9 @@ import java.util.*;
                     }
                     else if (input.equals(commandosOngezondKoud[1]))
                     {
-                        System.out.println("$0.50 Lolly\n" +
+                        System.out.println("$0.25 Lolly\n" +
                                 "$15.00 ('Zaksnoep') Zak vol met willekeurig snoep\n" +
-                                "$0.50 Dropveter");
+                                "$0.25 Dropveter");
                         commandoOngezondKoud = false;
                         commandoOngezondKoudSnoep = true;
                     }
@@ -301,7 +301,7 @@ import java.util.*;
                         commandoOngezondKoudIjs = true;
                     }
                 }
-            }
+            }//From here all ascii is used from http://patorjk.com/software/taag/#p=display&f=Calvin%20S&t=
             while (commandoGezondWarmVlees)
             {
                 input = scan.nextLine();
@@ -392,7 +392,43 @@ import java.util.*;
                 {
                     if (input.equals(commandosGezondKoudFruit[0])) //0 appel 1.5 | 1 peer 2 | 2 druiven 9 | 3 sinasappel 2.5
                     {
-                        System.out.println("2");
+                        money = money - 1.5;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔═╗╦  \n" +
+                                "╠═╣╠═╝╠═╝║╣ ║  \n" +
+                                "╩ ╩╩  ╩  ╚═╝╩═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudFruit = false;
+                    }
+                    else if (input.equals(commandosGezondKoudFruit[1])) //0 appel 1.5 | 1 peer 2 | 2 druiven 9 | 3 sinasappel 2.5
+                    {
+                        money = money - 2;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╦═╗\n" +
+                                "╠═╝║╣ ║╣ ╠╦╝\n" +
+                                "╩  ╚═╝╚═╝╩╚═\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudFruit = false;
+                    }
+                    else if (input.equals(commandosGezondKoudFruit[2])) //0 appel 1.5 | 1 peer 2 | 2 druiven 9 | 3 sinasappel 2.5
+                    {
+                        money = money - 9;
+                        System.out.println("\n" +
+                                "╔╦╗╦═╗╦ ╦╦╦  ╦╔═╗╔╗╔\n" +
+                                " ║║╠╦╝║ ║║╚╗╔╝║╣ ║║║\n" +
+                                "═╩╝╩╚═╚═╝╩ ╚╝ ╚═╝╝╚╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudFruit = false;
+                    }
+                    else if (input.equals(commandosGezondKoudFruit[3])) //0 appel 1.5 | 1 peer 2 | 2 druiven 9 | 3 sinasappel 2.5
+                    {
+                        money = money - 2.5;
+                        System.out.println("\n" +
+                                "╔═╗╦╔╗╔╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╦  \n" +
+                                "╚═╗║║║║╠═╣╚═╗╠═╣╠═╝╠═╝║╣ ║  \n" +
+                                "╚═╝╩╝╚╝╩ ╩╚═╝╩ ╩╩  ╩  ╚═╝╩═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudFruit = false;
                     }
                 }
             }
@@ -403,7 +439,53 @@ import java.util.*;
                 {
                     if (input.equals(commandosGezondKoudSalade[0])) //0 (1) 6 | 1 (2) 5 | 2 (3) 8.5 | 3 (4) 4.5 | 4 (5) 7.5
                     {
-                        System.out.println("3");
+                        money = money -6;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔═╗╦═╗╔╦╗╔═╗╔═╗╔═╗╔═╗╦    ╔═╗╔═╗╦  ╔═╗╔╦╗╔═╗  ╔╦╗╔═╗╔╦╗  ╔═╗╦  ╦╔═╗╔═╗╔═╗╔╦╗╔═╗\n" +
+                                "╔═╝║ ║║╣  ║ ║╣   ╠═╣╠═╣╠╦╝ ║║╠═╣╠═╝╠═╝║╣ ║    ╚═╗╠═╣║  ╠═╣ ║║║╣   ║║║║╣  ║   ╠═╣╚╗╔╝║ ║║  ╠═╣ ║║║ ║\n" +
+                                "╚═╝╚═╝╚═╝ ╩ ╚═╝  ╩ ╩╩ ╩╩╚══╩╝╩ ╩╩  ╩  ╚═╝╩═╝  ╚═╝╩ ╩╩═╝╩ ╩═╩╝╚═╝  ╩ ╩╚═╝ ╩   ╩ ╩ ╚╝ ╚═╝╚═╝╩ ╩═╩╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudSalade = false;
+                    }
+                    else if (input.equals(commandosGezondKoudSalade[1])) //0 (1) 6 | 1 (2) 5 | 2 (3) 8.5 | 3 (4) 4.5 | 4 (5) 7.5
+                    {
+                        money = money -5;
+                        System.out.println("\n" +
+                                "╔╦╗╔═╗╔╦╗╦╔╦╗╔═╗╦═╗╦═╗╔═╗╔╗╔╔═╗  ╔═╗╔═╗╦  ╔═╗╔╦╗╔═╗\n" +
+                                "║║║║╣  ║║║ ║ ║╣ ╠╦╝╠╦╝╠═╣║║║║╣   ╚═╗╠═╣║  ╠═╣ ║║║╣ \n" +
+                                "╩ ╩╚═╝═╩╝╩ ╩ ╚═╝╩╚═╩╚═╩ ╩╝╚╝╚═╝  ╚═╝╩ ╩╩═╝╩ ╩═╩╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudSalade = false;
+                    }
+                    else if (input.equals(commandosGezondKoudSalade[2])) //0 (1) 6 | 1 (2) 5 | 2 (3) 8.5 | 3 (4) 4.5 | 4 (5) 7.5
+                    {
+                        money = money -8.5;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╦  ╔╦╗  ╔═╗╔═╗╦  ╔═╗╔╦╗╔═╗  ╔╦╗╔═╗╔╦╗  ╔═╗╔═╗╦ ╦╦ ╔╦╗╦╔═╗╔═╗  ╔═╗╔╗╔  ╔═╗╦  ╦╔═╗╔═╗╔═╗╔╦╗╔═╗\n" +
+                                "╔═╝╠═╣║  ║║║  ╚═╗╠═╣║  ╠═╣ ║║║╣   ║║║║╣  ║   ╠═╝║╣ ║ ║║  ║ ║║╣ ╚═╗  ║╣ ║║║  ╠═╣╚╗╔╝║ ║║  ╠═╣ ║║║ ║\n" +
+                                "╚═╝╩ ╩╩═╝╩ ╩  ╚═╝╩ ╩╩═╝╩ ╩═╩╝╚═╝  ╩ ╩╚═╝ ╩   ╩  ╚═╝╚═╝╩═╝╩╚╝╚═╝╚═╝  ╚═╝╝╚╝  ╩ ╩ ╚╝ ╚═╝╚═╝╩ ╩═╩╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudSalade = false;
+                    }
+                    else if (input.equals(commandosGezondKoudSalade[3])) //0 (1) 6 | 1 (2) 5 | 2 (3) 8.5 | 3 (4) 4.5 | 4 (5) 7.5
+                    {
+                        money = money -4.5;
+                        System.out.println("\n" +
+                                "╦ ╦╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗╦  ╔═╗╔═╗╔╗╔  ╔═╗╔═╗╦  ╔═╗╔╦╗╔═╗  ╔╦╗╔═╗╔╦╗  ╔═╗╔═╗╔╦╗╔═╗\n" +
+                                "║║║╠═╣ ║ ║╣ ╠╦╝║║║║╣ ║  ║ ║║╣ ║║║  ╚═╗╠═╣║  ╠═╣ ║║║╣   ║║║║╣  ║   ╠╣ ║╣  ║ ╠═╣\n" +
+                                "╚╩╝╩ ╩ ╩ ╚═╝╩╚═╩ ╩╚═╝╩═╝╚═╝╚═╝╝╚╝  ╚═╝╩ ╩╩═╝╩ ╩═╩╝╚═╝  ╩ ╩╚═╝ ╩   ╚  ╚═╝ ╩ ╩ ╩\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudSalade = false;
+                    }
+                    else if (input.equals(commandosGezondKoudSalade[4])) //0 (1) 6 | 1 (2) 5 | 2 (3) 8.5 | 3 (4) 4.5 | 4 (5) 7.5
+                    {
+                        money = money -7.5;
+                        System.out.println("\n" +
+                                "╔╗ ╔═╗╔═╗╦╔═╦ ╦╔═╗╦╔╦╗╔═╗╔═╗╦  ╔═╗╔╦╗╔═╗\n" +
+                                "╠╩╗║ ║║╣ ╠╩╗║║║║╣ ║ ║ ╚═╗╠═╣║  ╠═╣ ║║║╣ \n" +
+                                "╚═╝╚═╝╚═╝╩ ╩╚╩╝╚═╝╩ ╩ ╚═╝╩ ╩╩═╝╩ ╩═╩╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondKoudSalade = false;
                     }
                 }
             }
@@ -414,7 +496,43 @@ import java.util.*;
                 {
                     if (input.equals(commandosOngezondWarmGebak[0])) //0 appeltaart 12 | 1 slagroomtaart 8 | 2 kwarktaart 4.5 | 3 glazuurtaart 20
                     {
-                        System.out.println("4");
+                        money = money - 12;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔═╗╦ ╔╦╗╔═╗╔═╗╦═╗╔╦╗\n" +
+                                "╠═╣╠═╝╠═╝║╣ ║  ║ ╠═╣╠═╣╠╦╝ ║ \n" +
+                                "╩ ╩╩  ╩  ╚═╝╩═╝╩ ╩ ╩╩ ╩╩╚═ ╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmGebak = false;
+                    }
+                    else if (input.equals(commandosOngezondWarmGebak[1])) //0 appeltaart 12 | 1 slagroomtaart 8 | 2 kwarktaart 4.5 | 3 glazuurtaart 20
+                    {
+                        money = money - 8;
+                        System.out.println("\n" +
+                                "╔═╗╦  ╔═╗╔═╗╦═╗╔═╗╔═╗╔╦╗╔╦╗╔═╗╔═╗╦═╗╔╦╗\n" +
+                                "╚═╗║  ╠═╣║ ╦╠╦╝║ ║║ ║║║║ ║ ╠═╣╠═╣╠╦╝ ║ \n" +
+                                "╚═╝╩═╝╩ ╩╚═╝╩╚═╚═╝╚═╝╩ ╩ ╩ ╩ ╩╩ ╩╩╚═ ╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmGebak = false;
+                    }
+                    else if (input.equals(commandosOngezondWarmGebak[2])) //0 appeltaart 12 | 1 slagroomtaart 8 | 2 kwarktaart 4.5 | 3 glazuurtaart 20
+                    {
+                        money = money - 4.5;
+                        System.out.println("\n" +
+                                "╦╔═╦ ╦╔═╗╦═╗╦╔═╔╦╗╔═╗╔═╗╦═╗╔╦╗\n" +
+                                "╠╩╗║║║╠═╣╠╦╝╠╩╗ ║ ╠═╣╠═╣╠╦╝ ║ \n" +
+                                "╩ ╩╚╩╝╩ ╩╩╚═╩ ╩ ╩ ╩ ╩╩ ╩╩╚═ ╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmGebak = false;
+                    }
+                    else if (input.equals(commandosOngezondWarmGebak[3])) //0 appeltaart 12 | 1 slagroomtaart 8 | 2 kwarktaart 4.5 | 3 glazuurtaart 20
+                    {
+                        money = money - 20;
+                        System.out.println("\n" +
+                                "╔═╗╦  ╔═╗╔═╗╦ ╦╦ ╦╦═╗╔╦╗╔═╗╔═╗╦═╗╔╦╗\n" +
+                                "║ ╦║  ╠═╣╔═╝║ ║║ ║╠╦╝ ║ ╠═╣╠═╣╠╦╝ ║ \n" +
+                                "╚═╝╩═╝╩ ╩╚═╝╚═╝╚═╝╩╚═ ╩ ╩ ╩╩ ╩╩╚═ ╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmGebak = false;
                     }
                 }
             }
@@ -425,7 +543,33 @@ import java.util.*;
                 {
                     if (input.equals(commandosOngezondWarmFrituur[0])) //0 frikandelbroodje 1 | 1 patat 3 | 2 kroket 1.5 |
                     {
-                        System.out.println("5");
+                        money = money - 1;
+                        System.out.println("\n" +
+                                "╔═╗  ╦═╗  ╦  ╦╔═  ╔═╗  ╔╗╔  ╔╦╗  ╔═╗  ╦    ╔╗   ╦═╗  ╔═╗  ╔═╗  ╔╦╗   ╦  ╔═╗\n" +
+                                "╠╣   ╠╦╝  ║  ╠╩╗  ╠═╣  ║║║   ║║  ║╣   ║    ╠╩╗  ╠╦╝  ║ ║  ║ ║   ║║   ║  ║╣ \n" +
+                                "╚    ╩╚═  ╩  ╩ ╩  ╩ ╩  ╝╚╝  ═╩╝  ╚═╝  ╩═╝  ╚═╝  ╩╚═  ╚═╝  ╚═╝  ═╩╝  ╚╝  ╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmFrituur = false;
+                    }
+                    else if (input.equals(commandosOngezondWarmFrituur[1])) //0 frikandelbroodje 1 | 1 patat 3 | 2 kroket 1.5 |
+                    {
+                        money = money - 3;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔╦╗╔═╗╔╦╗\n" +
+                                "╠═╝╠═╣ ║ ╠═╣ ║ \n" +
+                                "╩  ╩ ╩ ╩ ╩ ╩ ╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmFrituur = false;
+                    }
+                    else if (input.equals(commandosOngezondWarmFrituur[2])) //0 frikandelbroodje 1 | 1 patat 3 | 2 kroket 1.5 |
+                    {
+                        money = money - 1.5;
+                        System.out.println("\n" +
+                                "╦╔═╦═╗╔═╗╦╔═╔═╗╔╦╗\n" +
+                                "╠╩╗╠╦╝║ ║╠╩╗║╣  ║ \n" +
+                                "╩ ╩╩╚═╚═╝╩ ╩╚═╝ ╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondWarmFrituur = false;
                     }
                 }
             }
@@ -436,7 +580,43 @@ import java.util.*;
                 {
                     if (input.equals(commandosOngezondKoudKoek[0])) //0 chocoladekoek 2.5 | 1 speculaaskoek 5 | 2 gevulde koek 2.5 | 3 stroopwafel 2
                     {
-                        System.out.println("6");
+                        money = money - 2.5;
+                        System.out.println("\n" +
+                                "╔═╗╦ ╦╔═╗╔═╗╔═╗╦  ╔═╗╔╦╗╔═╗╦╔═╔═╗╔═╗╦╔═\n" +
+                                "║  ╠═╣║ ║║  ║ ║║  ╠═╣ ║║║╣ ╠╩╗║ ║║╣ ╠╩╗\n" +
+                                "╚═╝╩ ╩╚═╝╚═╝╚═╝╩═╝╩ ╩═╩╝╚═╝╩ ╩╚═╝╚═╝╩ ╩\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudKoek = false;
+                    }
+                    if (input.equals(commandosOngezondKoudKoek[1])) //0 chocoladekoek 2.5 | 1 speculaaskoek 5 | 2 gevulde koek 2.5 | 3 stroopwafel 2
+                    {
+                        money = money - 5;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔═╗╦ ╦╦  ╔═╗╔═╗╔═╗╦╔═╔═╗╔═╗╦╔═\n" +
+                                "╚═╗╠═╝║╣ ║  ║ ║║  ╠═╣╠═╣╚═╗╠╩╗║ ║║╣ ╠╩╗\n" +
+                                "╚═╝╩  ╚═╝╚═╝╚═╝╩═╝╩ ╩╩ ╩╚═╝╩ ╩╚═╝╚═╝╩ ╩\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudKoek = false;
+                    }
+                    if (input.equals(commandosOngezondKoudKoek[2])) //0 chocoladekoek 2.5 | 1 speculaaskoek 5 | 2 gevulde koek 2.5 | 3 stroopwafel 2
+                    {
+                        money = money - 2.5;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╦  ╦╦ ╦╦  ╔╦╗╔═╗  ╦╔═╔═╗╔═╗╦╔═\n" +
+                                "║ ╦║╣ ╚╗╔╝║ ║║   ║║║╣   ╠╩╗║ ║║╣ ╠╩╗\n" +
+                                "╚═╝╚═╝ ╚╝ ╚═╝╩═╝═╩╝╚═╝  ╩ ╩╚═╝╚═╝╩ ╩\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudKoek = false;
+                    }
+                    if (input.equals(commandosOngezondKoudKoek[3])) //0 chocoladekoek 2.5 | 1 speculaaskoek 5 | 2 gevulde koek 2.5 | 3 stroopwafel 2
+                    {
+                        money = money - 2;
+                        System.out.println("\n" +
+                                "╔═╗╔╦╗╦═╗╔═╗╔═╗╔═╗╦ ╦╔═╗╔═╗╔═╗╦  \n" +
+                                "╚═╗ ║ ╠╦╝║ ║║ ║╠═╝║║║╠═╣╠╣ ║╣ ║  \n" +
+                                "╚═╝ ╩ ╩╚═╚═╝╚═╝╩  ╚╩╝╩ ╩╚  ╚═╝╩═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudKoek = false;
                     }
                 }
             }
@@ -445,9 +625,35 @@ import java.util.*;
                 input = scan.nextLine();
                 input = input.toLowerCase();
                 {
-                    if (input.equals(commandosOngezondKoudSnoep[0])) //0 lolly 0.5 | 1 zaksnoep 15 | 2 dropveter 0.5
+                    if (input.equals(commandosOngezondKoudSnoep[0])) //0 lolly 0.25 | 1 zaksnoep 15 | 2 dropveter 0.25
                     {
-                        System.out.println("7");
+                        money = money - 0.25;
+                        System.out.println("\n" +
+                                "╦  ╔═╗╦  ╦ ╦ ╦\n" +
+                                "║  ║ ║║  ║ ╚╦╝\n" +
+                                "╩═╝╚═╝╩═╝╩═╝╩ \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudSnoep = false;
+                    }
+                    else if (input.equals(commandosOngezondKoudSnoep[1])) //0 lolly 0.25 | 1 zaksnoep 15 | 2 dropveter 0.25
+                    {
+                        money = money - 15;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╦╔═  ╔╦╗╔═╗╔╦╗  ╔═╗╔╗╔╔═╗╔═╗╔═╗\n" +
+                                "╔═╝╠═╣╠╩╗  ║║║║╣  ║   ╚═╗║║║║ ║║╣ ╠═╝\n" +
+                                "╚═╝╩ ╩╩ ╩  ╩ ╩╚═╝ ╩   ╚═╝╝╚╝╚═╝╚═╝╩  \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudSnoep = false;
+                    }
+                    else if (input.equals(commandosOngezondKoudSnoep[2])) //0 lolly 0.25 | 1 zaksnoep 15 | 2 dropveter 0.25
+                    {
+                        money = money - 0.25;
+                        System.out.println("\n" +
+                                "╔╦╗╦═╗╔═╗╔═╗╦  ╦╔═╗╔╦╗╔═╗╦═╗\n" +
+                                " ║║╠╦╝║ ║╠═╝╚╗╔╝║╣  ║ ║╣ ╠╦╝\n" +
+                                "═╩╝╩╚═╚═╝╩   ╚╝ ╚═╝ ╩ ╚═╝╩╚═\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudSnoep = false;
                     }
                 }
             }
@@ -458,7 +664,53 @@ import java.util.*;
                 {
                     if (input.equals(commandosOngezondKoudIjs[0])) //0 waterijsje 1 | 1 softijs1 3 | 2 softijs2 5 | 3 softijs5 10 | 4 softijs40 50
                     {
-                        System.out.println("8");
+                        money = money - 1;
+                        System.out.println("\n" +
+                                "╦ ╦╔═╗╔╦╗╔═╗╦═╗╦ ╦╔═╗ ╦╔═╗\n" +
+                                "║║║╠═╣ ║ ║╣ ╠╦╝║ ║╚═╗ ║║╣ \n" +
+                                "╚╩╝╩ ╩ ╩ ╚═╝╩╚═╩╚╝╚═╝╚╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudIjs = false;
+                    }
+                    if (input.equals(commandosOngezondKoudIjs[1])) //0 waterijsje 1 | 1 softijs1 3 | 2 softijs2 5 | 3 softijs5 10 | 4 softijs40 50
+                    {
+                        money = money - 3;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔╦╗╦ ╦╔═╗       ╔═╗╔═╗╔╗╔  ╔╗ ╔═╗╦  ╦  ╔═╗╔╦╗╦╔═╗\n" +
+                                "╚═╗║ ║╠╣  ║ ║ ║╚═╗  ───  ║╣ ║╣ ║║║  ╠╩╗║ ║║  ║  ║╣  ║ ║║╣ \n" +
+                                "╚═╝╚═╝╚   ╩ ╩╚╝╚═╝       ╚═╝╚═╝╝╚╝  ╚═╝╚═╝╩═╝╩═╝╚═╝ ╩╚╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudIjs = false;
+                    }
+                    else if (input.equals(commandosOngezondKoudIjs[2])) //0 waterijsje 1 | 1 softijs1 3 | 2 softijs2 5 | 3 softijs5 10 | 4 softijs40 50
+                    {
+                        money = money - 5;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔╦╗╦ ╦╔═╗       ╔╦╗╦ ╦╔═╗╔═╗  ╔╗ ╔═╗╦  ╦  ╔═╗╔╦╗╦╔═╗╔═╗\n" +
+                                "╚═╗║ ║╠╣  ║ ║ ║╚═╗  ───   ║ ║║║║╣ ║╣   ╠╩╗║ ║║  ║  ║╣  ║ ║║╣ ╚═╗\n" +
+                                "╚═╝╚═╝╚   ╩ ╩╚╝╚═╝        ╩ ╚╩╝╚═╝╚═╝  ╚═╝╚═╝╩═╝╩═╝╚═╝ ╩╚╝╚═╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudIjs = false;
+                    }
+                    else if (input.equals(commandosOngezondKoudIjs[3])) //0 waterijsje 1 | 1 softijs1 3 | 2 softijs2 5 | 3 softijs5 10 | 4 softijs40 50
+                    {
+                        money = money - 10;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔╦╗╦ ╦╔═╗       ╦  ╦╦ ╦╔═╗  ╔╗ ╔═╗╦  ╦  ╔═╗╔╦╗╦╔═╗╔═╗\n" +
+                                "╚═╗║ ║╠╣  ║ ║ ║╚═╗  ───  ╚╗╔╝║ ║╠╣   ╠╩╗║ ║║  ║  ║╣  ║ ║║╣ ╚═╗\n" +
+                                "╚═╝╚═╝╚   ╩ ╩╚╝╚═╝        ╚╝ ╩╚╝╚    ╚═╝╚═╝╩═╝╩═╝╚═╝ ╩╚╝╚═╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudIjs = false;
+                    }
+                    else if (input.equals(commandosOngezondKoudIjs[4])) //0 waterijsje 1 | 1 softijs1 3 | 2 softijs2 5 | 3 softijs5 10 | 4 softijs40 50
+                    {
+                        money = money - 50;
+                        System.out.println("\n" +
+                                "╔═╗╔═╗╔═╗╔╦╗╦ ╦╔═╗       ╦  ╦╔═╗╔═╗╦═╗╔╦╗╦╔═╗  ╔╗ ╔═╗╦  ╦  ╔═╗╔╦╗╦╔═╗╔═╗\n" +
+                                "╚═╗║ ║╠╣  ║ ║ ║╚═╗  ───  ╚╗╔╝║╣ ║╣ ╠╦╝ ║ ║║ ╦  ╠╩╗║ ║║  ║  ║╣  ║ ║║╣ ╚═╗\n" +
+                                "╚═╝╚═╝╚   ╩ ╩╚╝╚═╝        ╚╝ ╚═╝╚═╝╩╚═ ╩ ╩╚═╝  ╚═╝╚═╝╩═╝╩═╝╚═╝ ╩╚╝╚═╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoOngezondKoudIjs = false;
                     }
                 }
             }
