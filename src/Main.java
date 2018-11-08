@@ -31,9 +31,17 @@ import java.util.*;
                     String[] commandosOngezondKoudSnoep = {"lolly","zaksnoep","dropveter"};
                     String[] commandosOngezondKoudIjs = {"softijs1","softijs2","softijs5","softijs40"};
 
+                    double money;
+                    money = 1;
 
                     while (runMachine) //als de machine aanstaat
                     {
+                        if (money < 0)
+                        {
+                            System.out.println("Game over je bent blut!");
+                            runMachine = false;
+                            break;
+                        }
                         System.out.println("\n" +
                                 "WELKOM bij deze futuristische vending machine\n" +
                                 "We noemen het Futuristisch omdat deze vending machine warm en koude dingen kan bewaren!\n" +
@@ -118,7 +126,6 @@ import java.util.*;
                                 "░░░░░░████░░░░░░░░░░░░░░████\n" +
                                 "░░░░░░░░░░██████████████");
                         commando0 = true;
-
                     }
                 }
 
@@ -302,7 +309,32 @@ import java.util.*;
                 {
                     if (input.equals(commandosGezondWarmVlees[0])) //0 biefstuk 5 | 1 varkensvlees 5.5 | 2 kip 4
                     {
-                        System.out.println("");
+                        money = money - 5;
+                        System.out.println("\n" +
+                                "╔╗ ╦╔═╗╔═╗╔═╗╔╦╗╦ ╦╦╔═\n" +
+                                "╠╩╗║║╣ ╠╣ ╚═╗ ║ ║ ║╠╩╗\n" +
+                                "╚═╝╩╚═╝╚  ╚═╝ ╩ ╚═╝╩ ╩\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmVlees = false;
+                    }
+                    else if (input.equals(commandosGezondWarmVlees[1])) //0 biefstuk 5 | 1 varkensvlees 5.5 | 2 kip 4
+                    {
+                        money = money - 5.5;
+                        System.out.println("\n" +
+                                "╦  ╦╔═╗╦═╗╦╔═╔═╗╔╗╔╔═╗╦  ╦╦  ╔═╗╔═╗╔═╗\n" +
+                                "╚╗╔╝╠═╣╠╦╝╠╩╗║╣ ║║║╚═╗╚╗╔╝║  ║╣ ║╣ ╚═╗\n" +
+                                " ╚╝ ╩ ╩╩╚═╩ ╩╚═╝╝╚╝╚═╝ ╚╝ ╩═╝╚═╝╚═╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmVlees = false;
+                    }
+                    else if (input.equals(commandosGezondWarmVlees[2])) //0 biefstuk 5 | 1 varkensvlees 5.5 | 2 kip 4
+                    {
+                        System.out.println("\n" +
+                                "╦╔═╦╔═╗\n" +
+                                "╠╩╗║╠═╝\n" +
+                                "╩ ╩╩╩  \n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmVlees = false;
                     }
                 }
             }
@@ -313,7 +345,43 @@ import java.util.*;
                 {
                     if (input.equals(commandosGezondWarmGroente[0])) //0 wortels 3 | 1 dopwerten 2 | 2 slabonen 2.5 | 3 snijbonen 2.5
                     {
-                        System.out.println("1");
+                        money = money - 3;
+                        System.out.println("\n" +
+                                "╦ ╦╔═╗╦═╗╔╦╗╔═╗╦  ╔═╗\n" +
+                                "║║║║ ║╠╦╝ ║ ║╣ ║  ╚═╗\n" +
+                                "╚╩╝╚═╝╩╚═ ╩ ╚═╝╩═╝╚═╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmGroente = false;
+                    }
+                    else if (input.equals(commandosGezondWarmGroente[1])) //0 wortels 3 | 1 dopwerten 2 | 2 slabonen 2.5 | 3 snijbonen 2.5
+                    {
+                        money = money - 2;
+                        System.out.println("\n" +
+                                "╔╦╗╔═╗╔═╗╦ ╦╔═╗╦═╗╔╦╗╔═╗╔╗╔\n" +
+                                " ║║║ ║╠═╝║║║║╣ ╠╦╝ ║ ║╣ ║║║\n" +
+                                "═╩╝╚═╝╩  ╚╩╝╚═╝╩╚═ ╩ ╚═╝╝╚╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmGroente = false;
+                    }
+                    else if (input.equals(commandosGezondWarmGroente[2])) //0 wortels 3 | 1 dopwerten 2 | 2 slabonen 2.5 | 3 snijbonen 2.5
+                    {
+                        money = money - 2.5;
+                        System.out.println("\n" +
+                                "╔═╗╦  ╔═╗╔╗ ╔═╗╔╗╔╔═╗╔╗╔\n" +
+                                "╚═╗║  ╠═╣╠╩╗║ ║║║║║╣ ║║║\n" +
+                                "╚═╝╩═╝╩ ╩╚═╝╚═╝╝╚╝╚═╝╝╚╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmGroente = false;
+                    }
+                    else if (input.equals(commandosGezondWarmGroente[3])) //0 wortels 3 | 1 dopwerten 2 | 2 slabonen 2.5 | 3 snijbonen 2.5
+                    {
+                        money = money - 2.5;
+                        System.out.println("\n" +
+                                "╔═╗╔╗╔╦ ╦╔╗ ╔═╗╔╗╔╔═╗╔╗╔\n" +
+                                "╚═╗║║║║ ║╠╩╗║ ║║║║║╣ ║║║\n" +
+                                "╚═╝╝╚╝╩╚╝╚═╝╚═╝╝╚╝╚═╝╝╚╝\n" +
+                                "Je hebt nog "+money+" credits over");
+                        commandoGezondWarmGroente = false;
                     }
                 }
             }
