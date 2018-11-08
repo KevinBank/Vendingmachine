@@ -13,10 +13,24 @@ import java.util.*;
                     String[] commandos1 = {"gezond","ongezond"}; //gezond of ongezond?
                     String[] commandosWarmKoud = {"warm","koud"}; //Warm of koud?
 
+
                     String[] commandosGezondWarm = {"vlees","groente"};
                     String[] commandosGezondKoud = {"fruit","salade"};
                     String[] commandosOngezondWarm = {"gebak","frituur"};
                     String[] commandosOngezondKoud = {"koek","snoep","ijs"};
+
+
+                    String[] commandosGezondWarmVlees = {"biefstuk","varkensvlees","kip"};
+                    String[] commandosGezondWarmGroente = {"wortels","doprerten","slabonen","snijbonen"};
+                    String[] commandosGezondKoudFruit = {"appel","peer","druiven","sinasappel"};
+                    String[] commandosGezondKoudSalade = {"1","2","3","4","5","6"};
+
+                    String[] commandosOngezondWarmGebak = {"appeltaart","slagroomtaart","kwarktaart","glazuurtaart"};
+                    String[] commandosOngezondWarmFrituur = {"frikandelbroodje","patat","kroket"};
+                    String[] commandosOngezondKoudKoek = {"chocoladereep","speculaaskoek","gevulde koek","stroopwafel"};
+                    String[] commandosOngezondKoudSnoep = {"lolly","zaksnoep","dropveter"};
+                    String[] commandosOngezondKoudIjs = {"softijs1","softijs2","softijs5","softijs40"};
+
 
                     while (runMachine) //als de machine aanstaat
                     {
@@ -53,14 +67,14 @@ import java.util.*;
                         boolean commandoGezondKoudFruit = false;
                         boolean commandoGezondKoudSalade = false;
 
-            //gebak of frituur
-            boolean commandoOngezondWarmGebak = false;
-            boolean commandoOngezondWarmFrituur = false;
+                        //gebak of frituur
+                        boolean commandoOngezondWarmGebak = false;
+                        boolean commandoOngezondWarmFrituur = false;
 
-            //Koek Snoep of Ijs?
-            boolean commandoOngezondKoudKoek = false;
-            boolean commandoOngezondKoudSnoep = false;
-            boolean commandoOngezondKoudIjs = false;
+                        //Koek Snoep of Ijs?
+                        boolean commandoOngezondKoudKoek = false;
+                        boolean commandoOngezondKoudSnoep = false;
+                        boolean commandoOngezondKoudIjs = false;
 
 
             while (commando0 == false)
@@ -209,11 +223,12 @@ import java.util.*;
                     }
                     else if (input.equals(commandosGezondKoud[1]))
                     {
-                        System.out.println("$6.00 Zoete aardappel salade met avocado\n" +
-                                "$5.00 Mediterrane salade\n" +
-                                "$8.50 Zalm salade met peultjes en avocado\n" +
-                                "$4.50 Watermeloen salade met feta\n" +
-                                "$7.50 Boekweitsalade");
+                        System.out.println("Voer een nummer in:\n" +
+                                "$6.00 (1) Zoete aardappel salade met avocado\n" +
+                                "$5.00 (2) Mediterrane salade\n" +
+                                "$8.50 (3) Zalm salade met peultjes en avocado\n" +
+                                "$4.50 (4) Watermeloen salade met feta\n" +
+                                "$7.50 (5) Boekweitsalade");
                         commandoGezondKoud = false;
                         commandoGezondKoudSalade = true;
                     }
@@ -260,7 +275,7 @@ import java.util.*;
                     else if (input.equals(commandosOngezondKoud[1]))
                     {
                         System.out.println("$0.50 Lolly\n" +
-                                "$15.00 Zak met willekeurig snoep\n" +
+                                "$15.00 (Zaksnoep) Zak vol met willekeurig snoep\n" +
                                 "$0.50 Dropveter");
                         commandoOngezondKoud = false;
                         commandoOngezondKoudSnoep = true;
@@ -268,12 +283,111 @@ import java.util.*;
                     else if (input.equals(commandosOngezondKoud[2]))
                     {
                         System.out.println("$1.00 Waterijsje\n" +
-                                "$3.00 Softijsje\n" +
-                                "$5.00 Softijsje met 2 bolletjes\n" +
-                                "$10.00 Softijsje met 5 bolletjes\n" +
-                                "$50.00 Softijsbak met 40 bolletjes");
+                                "$3.00 (Softijs1) Softijsje met 1 bolletje\n" +
+                                "$5.00 (Softijs2) Softijsje met 2 bolletjes\n" +
+                                "$10.00 (Softijs5) Softijsje met 5 bolletjes\n" +
+                                "$50.00 (Softijs40) Softijsbak met 40 bolletjes");
                         commandoOngezondKoud = false;
                         commandoOngezondKoudIjs = true;
+                    }
+                }
+            }
+            while (commandoGezondWarmVlees)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(1commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoGezondWarmGroente)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(2commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoGezondKoudFruit)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(3commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoGezondKoudSalade)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(4commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoOngezondWarmGebak)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(5commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoOngezondWarmFrituur)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(6commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoOngezondKoudKoek)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(7commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoOngezondKoudSnoep)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(8commandos[0]))
+                    {
+                        System.out.println("");
+                    }
+                }
+            }
+            while (commandoOngezondKoudIjs)
+            {
+                input = scan.nextLine();
+                input = input.toLowerCase();
+                {
+                    if (input.equals(9commandos[0]))
+                    {
+                        System.out.println("");
                     }
                 }
             }
