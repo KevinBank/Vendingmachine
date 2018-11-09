@@ -19,12 +19,12 @@ import java.util.*;
                     String[] commandosOngezondWarm = {"gebak","frituur"};
                     String[] commandosOngezondKoud = {"koek","snoep","ijs"};
 
-
+                    //strings voor de items bij Gezond
                     String[] commandosGezondWarmVlees = {"biefstuk","varkensvlees","kip"};
                     String[] commandosGezondWarmGroente = {"wortels","doprerten","slabonen","snijbonen"};
                     String[] commandosGezondKoudFruit = {"appel","peer","druiven","sinasappel"};
                     String[] commandosGezondKoudSalade = {"1","2","3","4","5","6"};
-
+                    //strings voor de items bij Ongezond
                     String[] commandosOngezondWarmGebak = {"appeltaart","slagroomtaart","kwarktaart","glazuurtaart"};
                     String[] commandosOngezondWarmFrituur = {"frikandelbroodje","patat","kroket"};
                     String[] commandosOngezondKoudKoek = {"chocoladekoek","speculaaskoek","gevulde koek","stroopwafel"};
@@ -87,6 +87,13 @@ import java.util.*;
                         boolean commandoOngezondKoudSnoep = false;
                         boolean commandoOngezondKoudIjs = false;
 
+                        // for (int bla = 0; bla < commandosGezondKoud.length; bla++)
+                        // {
+                        //     if (input.equals(commandosGezondKoud[bla]))
+                        //     {
+                        //
+                        //     }
+                        // }
 
             while (commando0 == false)
             {
